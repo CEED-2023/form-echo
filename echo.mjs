@@ -12,21 +12,21 @@ ${content}
   `)
 }
 
-function fields(req) {
-  const body = req.body
+function fieldsInfo(fields) {
   let res = ''
 
-  for(let field in body){
-    res += `Field name:${field} Field value:-${body[field]}-\n` 
+  for(let field in fields){
+    res += `Field name:${field} Field value:-${fields[field]}-\n` 
   }
 
   return res
 }
 
 function echoFields(req) {
+  const fields = req.method === 'POST' ? req.body : req.query
   const content = `
 Form method: ${req.method}\n\n
-${fields(req)}
+${fieldsInfo(fields)}
   `
   return layoutWith(content)
 }

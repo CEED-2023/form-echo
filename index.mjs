@@ -10,10 +10,6 @@ const app = express()
 app.use(express.json())
 app.use(express.urlencoded())
 
-app.all('/ping', (req, res) => {
-  res.send('Pong')
-})
-
 app.all('/', (req, res) => {
   res.send(echoFields(req))
 })
