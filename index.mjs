@@ -4,7 +4,7 @@ const PORT = process.env.PORT || DEFAULT_PORT // Heroku assigns you a port
 import express from 'express'
 const app = express()
 
-app.get('/ping', (req, res) => {
+app.all('/ping', (req, res) => {
   res.send('Pong')
 })
 
