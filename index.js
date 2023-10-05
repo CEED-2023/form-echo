@@ -3,7 +3,7 @@ const PORT = process.env.PORT || DEFAULT_PORT // Heroku assigns you a port
 
 
 import express from 'express'
-import echoFields from './echo.mjs'
+import echoFields from './echo.js'
 
 const app = express()
 

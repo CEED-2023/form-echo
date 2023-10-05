@@ -2,9 +2,10 @@
   "name": "form-echo",
   "version": "0.0.1",
   "description": "Echoes the data received in a form",
-  "main": "index.mjs",
+  "main": "index.js",
+  "type": "module",
   "scripts": {
-    "start": "node index.mjs"
+    "start": "node index.js"
   },
   "author": "Alvaro Maceda <alvaro@alvaromaceda.es>",
   "repository": "git@github.com:CEED-2021/form-echo.git",
